@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import Head from "next/head";
 function Home() {
   const [data, setData] = useState([]);
   const [indData, setIndData] = useState([]);
@@ -14,6 +15,9 @@ function Home() {
   }, []);
   return (
     <>
+      <Head>
+        <title>posts/comments by next js</title>
+      </Head>
       <Link href="/">
         <button className="btn btn-dark mt-3" style={{ marginLeft: "1400px" }}>
           Logout

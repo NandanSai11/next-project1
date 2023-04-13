@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Head from "next/head";
 // import { useState, useEffect } from "react";
 //import styles from "@/styles/Home.module.css";
 import Link from "next/link";
@@ -19,6 +20,9 @@ export async function getServerSideProps(context) {
 export default function index({ data }) {
   return (
     <>
+      <Head>
+        <title>posts/comments by next js</title>
+      </Head>
       <Link href={"/Home"}>
         <button className="btn btn-dark  mt-3 mx-3">Back</button>
       </Link>

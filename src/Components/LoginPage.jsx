@@ -13,6 +13,10 @@ const LoginPage = () => {
     if (username === "test" && password == "12345") {
       // setLoggedIn(true);
       router.push("/Home");
+    } else {
+      alert("Username or Password is Wrong ");
+      document.getElementById("username").value = "";
+      document.getElementById("password").value = "";
     }
     // if (loggedIn) {
     // }
@@ -34,6 +38,7 @@ const LoginPage = () => {
                 </label>
                 <input
                   type="text"
+                  id="username"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   className="form-control"
@@ -48,6 +53,7 @@ const LoginPage = () => {
                 <input
                   className="form-control "
                   type="password"
+                  id="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
