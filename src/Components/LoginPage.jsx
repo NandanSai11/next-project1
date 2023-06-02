@@ -18,8 +18,6 @@ const LoginPage = () => {
       document.getElementById("username").value = "";
       document.getElementById("password").value = "";
     }
-    // if (loggedIn) {
-    // }
   };
 
   return (
